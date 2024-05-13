@@ -1,23 +1,88 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
-#map {
-  height: 100%;
-}
-
-/* 
- * Optional: Makes the sample page fill the window. 
- */
-html,
-body {
+/* General styles to ensure full height and no margins */
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Flex container to hold quiz and map side by side */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* Styles for the quiz section */
+.quiz {
+  flex: 1; /* Takes up 1 part of the flex container */
+  padding: 20px; /* Padding for content inside quiz section */
+  background-color: #add69f; /* Light grey background for the quiz section */
+  border-radius: 8px; /* Rounded corners for the quiz box */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Subtle shadow for depth */
+  width: 300px; /* Set a fixed width for the quiz area */
+  margin: 20px auto; /* Center the quiz box horizontally */
+}
+
+/* Styles for the map */
+#map {
+  flex: 2; /* Takes up 2 parts of the flex container, making it larger than the quiz section */
+  height: 100%; /* Full height of its container */
+}
+
+
+/* Heading style within the quiz */
+.quiz h2 {
+  color: #333; /* Dark grey color for the text */
+  font-family: Arial, sans-serif; /* Sans-serif font for the heading */
+  text-align: center; /* Center-align the heading */
+}
+
+/* Style for buttons */
+.quiz button {
+  background-color: #ff7300; /* Bootstrap primary button color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  margin-top: 10px; /* Margin on the top to separate from other elements */
+  margin-left: 55px;
+  cursor: pointer; /* Pointer cursor on hover */
+  display: block; /* Make the button block to take the full container width */
+  width: 70%;
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+.quiz button:hover {
+  background-color: #ab6600; /* Darken the button on hover */
+}
+
+/* Style for the question text */
+.quiz p {
+  font-family: Arial, sans-serif; /* Consistent font for the quiz */
+  font-size: 20px; /* Reasonable font size for reading */
+  color: #333; /* Lighter text color for less emphasis */
+  margin-top: 15px; /* Space above the question */
+}
+
+#building-name{
+  font-family: Arial, sans-serif; /* Consistent font for the quiz */
+  font-size: 20px; /* Reasonable font size for reading */
+  color: #000000; /* Lighter text color for less emphasis */
+}
+
+/* Notification box styling */
+#notification-box {
+  background-color: #f8d7da; /* Light red background by default */
+  color: #721c24; /* Dark red text color by default */
+  padding: 10px; /* Padding inside the notification box */
+  margin-top: 15px; /* Space above the notification box */
+  border-radius: 5px; /* Rounded corners for the notification box */
+  border: 1px solid #f5c6cb; /* Light red border */
+  display: none; /* Hide by default */
+  text-align: center; /* Center text */
+}
+
+/* Notification message styling */
+#notification-message {
+  margin: 0; /* No margin to fit well in the notification box */
+  font-weight: bold; /* Bold text for importance */
+}

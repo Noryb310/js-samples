@@ -15,3 +15,12 @@ npm run build  # production
 
 For feedback related to this sample, please open a new issue on
 [GitHub](https://github.com/googlemaps/js-samples/issues).
+
+styles:
+https://developers.google.com/maps/documentation/javascript/style-reference
+
+gestureHandling:
+https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions.gestureHandling
+
+eventListener: 'Click'
+https://developers.google.com/maps/documentation/javascript/events
